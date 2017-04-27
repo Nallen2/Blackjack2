@@ -47,11 +47,12 @@ void PlayGame()
 
 void DrawCards_Player(int playerCardsSuit[], int playerCardsNum[], int& numPlayerCards, int numDraw)
 {
-	int index = numPlayerCards;
+	int index;
 	
 	
 	for (int i = 0; i < numDraw; i++)
 	{
+		index = numPlayerCards;
 		playerCardsNum[index] = rand() % 13 + 1;
 		playerCardsSuit[index] = rand() % 4;
 		numPlayerCards++;
@@ -60,11 +61,12 @@ void DrawCards_Player(int playerCardsSuit[], int playerCardsNum[], int& numPlaye
 
 void DrawCards_Computer(int computerCardsSuit[], int computerCardsNum[], int& numComputerCards, int numDraw)
 {
-	int index = numComputerCards;
+	int index;
 
 
 	for (int i = 0; i < numDraw; i++)
 	{
+		index = numComputerCards;
 		computerCardsNum[index] = rand() % 13 + 1;
 		computerCardsSuit[index] = rand() % 4;
 		numComputerCards++;
