@@ -14,13 +14,12 @@ int main()
 	string firstName, lastName;
 	char startChoice = NULL;
 	int numPlayerCards = 2, numComputerCards = 2;
-	double playerCards[5] = { 3.2, 4.1 };
-	double computerCards[5] = { 12.4, 10.3 };
+	int playerCardsSuit[5] = { 2, 1 };
+	int computerCardsSuit[5] = { 4, 3 };
 	int playerCardsNum[5] = { 3, 4 };
 	int computerCardsNum[5] = { 12, 10 };
 	string cardTop[14];
 	string cardBottom[14];
-
 	mainMenu(firstName, lastName, startChoice);
 	if (startChoice == 'y' || startChoice == 'Y') {
 		loadCards(cardTop, cardBottom);

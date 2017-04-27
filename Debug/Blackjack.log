@@ -1,3 +1,8 @@
-﻿  matthew_schwartzkopf_functions.cpp
-  Blackjack.vcxproj -> C:\Users\Matthew's Computer\Desktop\College Work\Programming\College\C++\Blackjack\Blackjack\Debug\Blackjack.exe
-  Blackjack.vcxproj -> C:\Users\Matthew's Computer\Desktop\College Work\Programming\College\C++\Blackjack\Blackjack\Debug\Blackjack.pdb (Full PDB)
+﻿  victor_alves_functions.cpp
+h:\blackjack2\victor_alves_functions.cpp(27): error C2664: 'void MakeChoice(std::string)': cannot convert argument 1 from 'int' to 'std::string'
+  h:\blackjack2\victor_alves_functions.cpp(27): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+h:\blackjack2\victor_alves_functions.cpp(77): error C3861: 'DiscardHand': identifier not found
+  nicholas_allen_functions.cpp
+  matthew_schwartzkopf_functions.cpp
+  main.cpp
+  Generating Code...
