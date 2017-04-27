@@ -35,7 +35,7 @@
     <ClCompile Include="matthew_schwartzkopf_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\..\..\Matthew%27s Computer\Desktop\College Work\Programming\College\C++\Blackjack\Blackjack\main.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

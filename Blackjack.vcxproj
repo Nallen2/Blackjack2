@@ -123,7 +123,7 @@
     <ClInclude Include="victor_alves_functions.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\..\Matthew%27s Computer\Desktop\College Work\Programming\College\C++\Blackjack\Blackjack\main.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="matthew_schwartzkopf_functions.cpp" />
     <ClCompile Include="nicholas_allen_functions.cpp" />
     <ClCompile Include="victor_alves_functions.cpp" />
