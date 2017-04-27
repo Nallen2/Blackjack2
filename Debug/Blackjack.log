@@ -1,8 +1,9 @@
 ﻿  victor_alves_functions.cpp
-h:\blackjack2\victor_alves_functions.cpp(27): error C2664: 'void MakeChoice(std::string)': cannot convert argument 1 from 'int' to 'std::string'
-  h:\blackjack2\victor_alves_functions.cpp(27): note: No constructor could take the source type, or constructor overload resolution was ambiguous
-h:\blackjack2\victor_alves_functions.cpp(77): error C3861: 'DiscardHand': identifier not found
+h:\blackjack2\victor_alves_functions.cpp(28): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  Compiling...
   nicholas_allen_functions.cpp
   matthew_schwartzkopf_functions.cpp
   main.cpp
   Generating Code...
+  Blackjack.vcxproj -> H:\Blackjack2\Debug\Blackjack.exe

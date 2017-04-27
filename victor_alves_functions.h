@@ -10,6 +10,7 @@ I certify that this assignment is entirely my own work.
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <fstream>
 // random numbers
 #include <time.h>
 #include <stdlib.h>
@@ -17,10 +18,8 @@ I certify that this assignment is entirely my own work.
 using namespace std;
 
 void PlayGame();
-void DrawOne();
-void DrawTwo();
-int SelectCardNumber();
-int SelectCardSuit();
-int GetFinalCard();
-void CheckWin();
-void MakeChoice(string userChoice);
+void DrawCards_Player(int playerCardsSuit[], int playerCardsNum[], int& numPlayerCards, int numDraw);
+void DrawCards_Computer(int computerCardsSuit[], int computerCardsNum[], int& numComputerCards, int numDraw);
+//void CheckWin();
+void MakeChoice(int playerCardsSuit[], int playerCardsNum[], int& numPlayerCards, int userChoice, char& userExit);
+char DiscardHand();
