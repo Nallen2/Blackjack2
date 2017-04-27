@@ -159,6 +159,7 @@ void displayBoard(int numPlayerCards, int numComputerCards, int playerCardsSuit[
 	{
 		cout << cardPieces[3] << "  ";
 	}
+	cout << endl;
 }
 
 void loadCards(string cardTop[], string cardBottom[])

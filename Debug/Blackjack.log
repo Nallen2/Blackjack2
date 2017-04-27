@@ -1,9 +1,3 @@
 ﻿  victor_alves_functions.cpp
-c:\program files (x86)\microsoft visual studio 14.0\vc\include\crtdefs.h(10): fatal error C1083: Cannot open include file: 'corecrt.h': No such file or directory
-  nicholas_allen_functions.cpp
-c:\program files (x86)\microsoft visual studio 14.0\vc\include\crtdefs.h(10): fatal error C1083: Cannot open include file: 'corecrt.h': No such file or directory
-  matthew_schwartzkopf_functions.cpp
-c:\program files (x86)\microsoft visual studio 14.0\vc\include\crtdefs.h(10): fatal error C1083: Cannot open include file: 'corecrt.h': No such file or directory
-  main.cpp
-c:\program files (x86)\microsoft visual studio 14.0\vc\include\crtdefs.h(10): fatal error C1083: Cannot open include file: 'corecrt.h': No such file or directory
-  Generating Code...
+h:\blackjack2\victor_alves_functions.cpp(28): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Blackjack.vcxproj -> H:\Blackjack2\Debug\Blackjack.exe

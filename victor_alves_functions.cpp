@@ -13,7 +13,7 @@ I certify that this assignment is entirely my own work.
 
 void PlayGame()
 {
-	char			userExit = 'e'; // hardcode "e" for testing purposes
+	char			userExit = ' ';
 	int				userChoice,
 					numPlayerCards = 0,
 					numComputerCards = 0,
@@ -27,14 +27,15 @@ void PlayGame()
 	loadCards(cardTop, cardBottom); // 1) Loads cards from file
 	srand(time(NULL));
 	
-	do
-	{
-		cout << "The game begins!" << endl;
+	cout << "The game begins!" << endl;
 		
-		DrawCards_Player(playerCardsSuit, playerCardsNum, numPlayerCards, 2); // 2) Draw two cards for player
-		DrawCards_Computer(computerCardsSuit, computerCardsNum, numComputerCards, 2);
+	DrawCards_Player(playerCardsSuit, playerCardsNum, numPlayerCards, 2); // 2) Draw two cards for player
+	DrawCards_Computer(computerCardsSuit, computerCardsNum, numComputerCards, 2);
+		
+	while (userExit != 'E' && userExit != 'e')
+	{
 		displayBoard(numPlayerCards, numComputerCards, playerCardsSuit, computerCardsSuit, playerCardsNum, computerCardsNum, cardTop, cardBottom); // 3) Display board
-		system("pause");
+
 		cout << "You have your cards. You have three options: hit, stay, or fold." << endl;
 		cout << "What are you going to do?" << endl;
 		cout << "Select 1 if you want a hit, select 2 if you want to stay, or select 3 if you want to fold." << endl;
@@ -42,7 +43,7 @@ void PlayGame()
 
 		MakeChoice(playerCardsSuit, playerCardsNum, numPlayerCards, userChoice, userExit);
 
-	} while (userExit == 'E' && userExit == 'e');
+	}
 }
 
 void DrawCards_Player(int playerCardsSuit[], int playerCardsNum[], int& numPlayerCards, int numDraw)
