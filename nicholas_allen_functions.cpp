@@ -191,9 +191,11 @@ void loadCards(string cardTop[], string cardBottom[])
 
 int isCardUnique(int cardSuit, int cardNum)
 {
+	int temp = cardNum - 1;
+
 	if (cardSuit == 0)
 	{
-		if (heartCards[cardNum - 1] == true)
+		if (heartCards[temp] == true)
 		{
 			return -1;
 		}
@@ -205,7 +207,7 @@ int isCardUnique(int cardSuit, int cardNum)
 
 	if (cardSuit == 1)
 	{
-		if (diamondCards[cardNum - 1] == true)
+		if (diamondCards[temp] == true)
 		{
 			return -1;
 		}
@@ -217,7 +219,7 @@ int isCardUnique(int cardSuit, int cardNum)
 
 	if (cardSuit == 2)
 	{
-		if (clubCards[cardNum - 1] == true)
+		if (clubCards[temp] == true)
 		{
 			return -1;
 		}
@@ -229,7 +231,7 @@ int isCardUnique(int cardSuit, int cardNum)
 
 	if (cardSuit == 3)
 	{
-		if (spadeCards[cardNum - 1] == true)
+		if (spadeCards[temp] == true)
 		{
 			return -1;
 		}
@@ -242,24 +244,26 @@ int isCardUnique(int cardSuit, int cardNum)
 
 void setCardUsed(int cardSuit, int cardNum)
 {
+	int temp = cardNum - 1;
+	
 	if (cardSuit == 0)
 	{
-		heartCards[cardNum] = true;
+		heartCards[temp] = true;
 	}
 
 	if (cardSuit == 1)
 	{
-		diamondCards[cardNum] = true;
+		diamondCards[temp] = true;
 	}
 
 	if (cardSuit == 2)
 	{
-		clubCards[cardNum] = true;
+		clubCards[temp] = true;
 	}
 
 	if (cardSuit == 3)
 	{
-		spadeCards[cardNum] = true;
+		spadeCards[temp] = true;
 	}
 }
 

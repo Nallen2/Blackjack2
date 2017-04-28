@@ -25,12 +25,13 @@ void PlayGame()
 					cardBottom[14];
 	
 	loadCards(cardTop, cardBottom); // 1) Loads cards from file
-	srand(time(NULL));
+	srand(unsigned int time(NULL));
 	
 	cout << "The game begins!" << endl;
-		
-	DrawCards_Player(playerCardsSuit, playerCardsNum, numPlayerCards, 2); // 2) Draw two cards for player
+	
 	DrawCards_Computer(computerCardsSuit, computerCardsNum, numComputerCards, 2);
+	DrawCards_Player(playerCardsSuit, playerCardsNum, numPlayerCards, 2); // 2) Draw two cards for player
+	
 		
 	while (userExit != 'E' && userExit != 'e')
 	{
@@ -42,13 +43,15 @@ void PlayGame()
 		cin >> userChoice;
 
 		MakeChoice(playerCardsSuit, playerCardsNum, numPlayerCards, userChoice, userExit);
-
 	}
+	checkWin(computerCardsNum, playerCardsNum, numPlayerCards, numComputerCards);
 }
 
 void DrawCards_Player(int playerCardsSuit[], int playerCardsNum[], int& numPlayerCards, int numDraw)
 {
-	int index;
+	int index,
+		noDuplicate,
+		num;
 	
 	
 	for (int i = 0; i < numDraw; i++)
@@ -56,13 +59,29 @@ void DrawCards_Player(int playerCardsSuit[], int playerCardsNum[], int& numPlaye
 		index = numPlayerCards;
 		playerCardsNum[index] = rand() % 13 + 1;
 		playerCardsSuit[index] = rand() % 4;
-		numPlayerCards++;
+		noDuplicate = isCardUnique(playerCardsSuit[index], playerCardsNum[index]);
+		
+		if (noDuplicate == 0)
+		{
+			numPlayerCards++;
+			setCardUsed(playerCardsSuit[index], playerCardsNum[index]);
+		}
+		
+		else if (noDuplicate == -1)
+		{
+			num = numDraw - i;
+			DrawCards_Player(playerCardsSuit, playerCardsNum, numPlayerCards, num);
+			break;
+		}
+
 	}
 }
 
 void DrawCards_Computer(int computerCardsSuit[], int computerCardsNum[], int& numComputerCards, int numDraw)
 {
-	int index;
+	int index,
+		noDuplicate,
+		num;
 
 
 	for (int i = 0; i < numDraw; i++)
@@ -70,7 +89,21 @@ void DrawCards_Computer(int computerCardsSuit[], int computerCardsNum[], int& nu
 		index = numComputerCards;
 		computerCardsNum[index] = rand() % 13 + 1;
 		computerCardsSuit[index] = rand() % 4;
-		numComputerCards++;
+		noDuplicate = isCardUnique(computerCardsSuit[index], computerCardsNum[index]);
+
+		if (noDuplicate == 0)
+		{
+			numComputerCards++;
+			setCardUsed(computerCardsSuit[index], computerCardsNum[index]);
+		}
+
+		else if (noDuplicate == -1)
+		{
+			num = numDraw - i;
+			DrawCards_Player(computerCardsSuit, computerCardsNum, numComputerCards, num);
+			break;
+		}
+
 	}
 }
 
@@ -98,11 +131,6 @@ void MakeChoice(int playerCardsSuit[], int playerCardsNum[], int& numPlayerCards
 		cin >> userChoice;
 	}
 }
-
-// void CheckWin()
-//{
-
-//}
 
 char DiscardHand()
 {
