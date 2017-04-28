@@ -70,28 +70,47 @@ int mainMenu(string firstName, string lastName, char startChoice)
 		cout << "If neither, enter 'N'" << endl;
 		cin >> choice;
 
-		if (choice == 'r' || choice == 'R')
+		switch (choice)
 		{
-			rules(choice);
-		}
+			case 'r':
+				rules(choice);
+				break;
+		
+			case 'R':
+				rules(choice);
+				break;
 
-		if (choice == 'h' || choice == 'H')
-		{
-			howToPlay(choice);
-		}
+			case 'h':
+				howToPlay(choice);
+				break;
+		
+			case 'H':
+				howToPlay(choice);
+				break;
 
-		if (choice == 'n' || choice == 'N')
-		{
-			cout << "Start round? (Y or N): " << endl;
-			cin >> startChoice;
-
-			if (startChoice == 'y' || 'Y')                   // If you enter "y" to start round, then "n", it doesn't return 0;, but continues with game
+			case 'n':
 			{
-				PlayGame();
-			}
-			else if (startChoice == 'n' || startChoice == 'N')
-			{
-				return 0;
+				cout << "Start round? (Y or N): " << endl;
+				cin >> startChoice;
+
+				switch (startChoice)
+				{
+				case 'y':
+					PlayGame();
+					break;
+
+				case 'Y':
+					PlayGame();
+					break;
+
+				case 'n':
+					return 0;
+					break;
+
+				case 'N':
+					return 0;
+					break;
+				}
 			}
 		}
 	} while (choice != 'n' || choice != 'N' || startChoice != 'n' || startChoice != 'N');

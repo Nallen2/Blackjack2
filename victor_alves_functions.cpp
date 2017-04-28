@@ -25,7 +25,7 @@ void PlayGame()
 					cardBottom[14];
 	
 	loadCards(cardTop, cardBottom); // 1) Loads cards from file
-	srand(unsigned int time(NULL));
+	srand((unsigned int) time(NULL));
 	
 	cout << "The game begins!" << endl;
 	
@@ -100,7 +100,7 @@ void DrawCards_Computer(int computerCardsSuit[], int computerCardsNum[], int& nu
 		else if (noDuplicate == -1)
 		{
 			num = numDraw - i;
-			DrawCards_Player(computerCardsSuit, computerCardsNum, numComputerCards, num);
+			DrawCards_Computer(computerCardsSuit, computerCardsNum, numComputerCards, num);
 			break;
 		}
 

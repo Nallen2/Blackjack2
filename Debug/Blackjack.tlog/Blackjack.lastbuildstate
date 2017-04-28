@@ -1,6 +1,2 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
-<<<<<<< HEAD
 Debug|Win32|H:\Blackjack2\|
-=======
-Debug|Win32|C:\Users\matthew.schwartzkopf\Documents\GitHub\Blackjack2\|
->>>>>>> 17f88cfe036ce8e7dbb27e28f03d9820a7e49294
