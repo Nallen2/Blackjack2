@@ -101,14 +101,12 @@ void DrawCards_Computer(int computerCardsSuit[], int computerCardsNum[], int& nu
 		else if (noDuplicate == -1)
 		{
 			num = numDraw - i;
-			DrawCards_Player(computerCardsSuit, computerCardsNum, numComputerCards, num);
+			DrawCards_Computer(computerCardsSuit, computerCardsNum, numComputerCards, num);
 			break;
 		}
 
 	}
 }
-
- // 0 = heart, 1 = diamond, 2 = clubs, 3 = spades
 
 void MakeChoice(int playerCardsSuit[], int playerCardsNum[], int& numPlayerCards, int userChoice, char& userExit)
 {
