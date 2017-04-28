@@ -20,6 +20,5 @@ using namespace std;
 void PlayGame();
 void DrawCards_Player(int playerCardsSuit[], int playerCardsNum[], int& numPlayerCards, int numDraw);
 void DrawCards_Computer(int computerCardsSuit[], int computerCardsNum[], int& numComputerCards, int numDraw);
-//void CheckWin();
 void MakeChoice(int playerCardsSuit[], int playerCardsNum[], int& numPlayerCards, int userChoice, char& userExit);
 char DiscardHand();
