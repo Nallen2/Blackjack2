@@ -22,6 +22,7 @@ void howToPlay(char choice);
 void PlayGame();
 void checkWin(int computerCardsNum[], int playerCardsNum[], int numPlayerCards, int numComputerCards);
 void MakeChoiceComputer(int computerCardsSuit[], int computerCardsNum[], int& numComputerCards, int userChoice, char& userExit);
+void checkLose(int computerCardsNum[], int playerCardsNum[], int numPlayerCards, int numComputerCards);
 
 void MakeChoiceComputer(int computerCardsSuit[], int computerCardsNum[], int& numComputerCards, int userChoice, char& userExit)
 {
@@ -45,6 +46,31 @@ void MakeChoiceComputer(int computerCardsSuit[], int computerCardsNum[], int& nu
 	}
 }
 
+void checkLose(int computerCardsNum[], int playerCardsNum[], int numPlayerCards, int numComputerCards)
+{
+	int playerTotal = 0;
+	int computerTotal = 0;
+
+	for (int i = 0; i < numPlayerCards; i++)
+	{
+		playerTotal += playerCardsNum[i];
+
+		if (playerTotal == 21)
+		{
+			cout << "PLAYER WINS WITH TOTAL 21" << endl;
+		}
+	}
+
+	for (int i = 0; i < numComputerCards; i++)
+	{
+		computerTotal += computerCardsNum[i];
+
+		if (computerTotal == 21)
+		{
+			cout << "COMPUTER WINS WITH TOTAL 21" << endl;
+		}
+	}
+}
 
 void checkWin(int computerCardsNum[], int playerCardsNum[], int numPlayerCards, int numComputerCards)
 {

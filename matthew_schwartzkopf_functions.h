@@ -17,6 +17,6 @@ void rules(char choice);
 void howToPlay(char choice);
 void checkWin(int computerCardsNum[], int playerCardsNum[], int numPlayerCards, int numComputerCards);
 void MakeChoiceComputer(int computerCardsSuit[], int computerCardsNum[], int& numComputerCards, int userChoice, char& userExit);
-
+void checkLose(int computerCardsNum[], int playerCardsNum[], int numPlayerCards, int numComputerCards);
 
 #endif /* matthewschwartzkopffunctoins_h */

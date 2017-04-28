@@ -46,6 +46,7 @@ void PlayGame()
 		MakeChoiceComputer(computerCardsSuit, computerCardsNum, numComputerCards, userChoice, userExit);
 	}
 	checkWin(computerCardsNum, playerCardsNum, numPlayerCards, numComputerCards);
+	checkLose(computerCardsNum, playerCardsNum, numPlayerCards, numComputerCards);
 }
 
 void DrawCards_Player(int playerCardsSuit[], int playerCardsNum[], int& numPlayerCards, int numDraw)
