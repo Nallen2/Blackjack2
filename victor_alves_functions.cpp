@@ -25,19 +25,12 @@ void PlayGame()
 					cardBottom[14];
 	
 	loadCards(cardTop, cardBottom); // 1) Loads cards from file
-<<<<<<< HEAD
 	srand(unsigned int time(NULL));
-=======
-	srand((unsigned int)time(NULL));
->>>>>>> 17f88cfe036ce8e7dbb27e28f03d9820a7e49294
 	
 	cout << "The game begins!" << endl;
 	
 	DrawCards_Computer(computerCardsSuit, computerCardsNum, numComputerCards, 2);
-<<<<<<< HEAD
 	DrawCards_Player(playerCardsSuit, playerCardsNum, numPlayerCards, 2); // 2) Draw two cards for player
-=======
->>>>>>> 17f88cfe036ce8e7dbb27e28f03d9820a7e49294
 	
 		
 	while (userExit != 'E' && userExit != 'e')
@@ -139,10 +132,6 @@ void MakeChoice(int playerCardsSuit[], int playerCardsNum[], int& numPlayerCards
 	}
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 17f88cfe036ce8e7dbb27e28f03d9820a7e49294
 char DiscardHand()
 {
 	char userExit;
