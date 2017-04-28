@@ -15,5 +15,8 @@ using namespace std;
 int mainMenu(string firstName, string lastName, char startChoice);
 void rules(char choice);
 void howToPlay(char choice);
+void checkWin(int computerCardsNum[], int playerCardsNum[], int numPlayerCards, int numComputerCards);
+
+
 
 #endif /* matthewschwartzkopffunctoins_h */
