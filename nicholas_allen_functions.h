@@ -20,4 +20,8 @@ using namespace std;
 void displayBoard(int numPlayerCards, int numComputerCards, int playerCardsSuit[], int computerCardsSuit[], int playerCardsNum[], int computerCardsNum[], string cardTop[], string cardBottom[]);
 void loadCards(string cardTop[], string cardBottom[]);
 
+int isCardUnique(int cardSuit, int cardNum);
+void setCardUsed(int cardSuit, int cardNum);
+void setCards();
+
 #endif;

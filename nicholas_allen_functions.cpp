@@ -11,6 +11,12 @@ I certify that this assignment is entirely my own work.
 #include "matthew_schwartzkopf_functions.h"
 #include "victor_alves_functions.h"
 
+int max = 13;
+bool heartCards[13];
+bool diamondCards[13];
+bool clubCards[13];
+bool spadeCards[13];
+
 void displayBoard(int numPlayerCards, int numComputerCards, int playerCardsSuit[], int computerCardsSuit[], int playerCardsNum[], int computerCardsNum[], string cardTop[], string cardBottom[])
 {
 
@@ -181,4 +187,89 @@ void loadCards(string cardTop[], string cardBottom[])
 		}
 	}
 	input.close();
+}
+
+int isCardUnique(int cardSuit, int cardNum)
+{
+	if (cardSuit == 0)
+	{
+		if (heartCards[cardNum] == true)
+		{
+			return -1;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+
+	if (cardSuit == 1)
+	{
+		if (diamondCards[cardNum] == true)
+		{
+			return -1;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+
+	if (cardSuit == 2)
+	{
+		if (clubCards[cardNum] == true)
+		{
+			return -1;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+
+	if (cardSuit == 3)
+	{
+		if (spadeCards[cardNum] == true)
+		{
+			return -1;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+}
+
+void setCardUsed(int cardSuit, int cardNum)
+{
+	if (cardSuit == 0)
+	{
+		heartCards[cardNum] = true;
+	}
+
+	if (cardSuit == 1)
+	{
+		diamondCards[cardNum] = true;
+	}
+
+	if (cardSuit == 2)
+	{
+		clubCards[cardNum] = true;
+	}
+
+	if (cardSuit == 3)
+	{
+		spadeCards[cardNum] = true;
+	}
+}
+
+void setCards()
+{
+	for (int i = 0; i < max; i++)
+	{
+		heartCards[i] = 0;
+		diamondCards[i] = 0;
+		clubCards[i] = 0;
+		spadeCards[i] = 0;
+	}
 }
