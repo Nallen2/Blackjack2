@@ -20,6 +20,39 @@ int mainMenu(string firstName, string lastName, char startChoice);
 void rules(char choice);
 void howToPlay(char choice);
 void PlayGame();
+void checkWin(int computerCardsNum[], int playerCardsNum[], int numPlayerCards, int numComputerCards);
+
+
+void checkWin(int computerCardsNum[], int playerCardsNum[], int numPlayerCards, int numComputerCards)
+{
+	int playerTotal = 0;
+	int computerTotal = 0;
+
+	for (int i = 0; i < numPlayerCards; i++) 
+	{
+		playerTotal += playerCardsNum[i];
+	}
+
+	for (int i = 0; i < numComputerCards; i++)
+	{
+		computerTotal += computerCardsNum[i];
+	}
+
+	if (computerTotal > playerTotal)
+	{
+		cout << "COMPUTER WINS!" << endl;
+	}
+	else if (playerTotal > computerTotal)
+	{
+		cout << "PLAYER WINS!" << endl;
+	}
+	else if (playerTotal == computerTotal)
+	{
+		cout << "PLAYER AND COMPUTER TIED!" << endl;
+	}
+}
+
+
 
 int mainMenu(string firstName, string lastName, char startChoice)
 {
@@ -52,11 +85,11 @@ int mainMenu(string firstName, string lastName, char startChoice)
 			cout << "Start round? (Y or N): " << endl;
 			cin >> startChoice;
 
-			if (startChoice == 'y' || 'Y')
+			if (startChoice == 'y' || 'Y')                   // If you enter "y" to start round, then "n", it doesn't return 0;, but continues with game
 			{
 				PlayGame();
 			}
-			if (startChoice == 'n' || startChoice == 'N')
+			else if (startChoice == 'n' || startChoice == 'N')
 			{
 				return 0;
 			}

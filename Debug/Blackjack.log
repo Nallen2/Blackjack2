@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 ﻿  nicholas_allen_functions.cpp
 h:\blackjack2\nicholas_allen_functions.cpp(243): warning C4715: 'isCardUnique': not all control paths return a value
   Blackjack.vcxproj -> H:\Blackjack2\Debug\Blackjack.exe
   Blackjack.vcxproj -> H:\Blackjack2\Debug\Blackjack.pdb (Full PDB)
+=======
+﻿  matthew_schwartzkopf_functions.cpp
+  Blackjack.vcxproj -> C:\Users\matthew.schwartzkopf\Documents\GitHub\Blackjack2\Debug\Blackjack.exe
+  Blackjack.vcxproj -> C:\Users\matthew.schwartzkopf\Documents\GitHub\Blackjack2\Debug\Blackjack.pdb (Full PDB)
+>>>>>>> 17f88cfe036ce8e7dbb27e28f03d9820a7e49294

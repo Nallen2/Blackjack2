@@ -195,7 +195,11 @@ int isCardUnique(int cardSuit, int cardNum)
 
 	if (cardSuit == 0)
 	{
+<<<<<<< HEAD
 		if (heartCards[temp] == true)
+=======
+		if (heartCards[cardNum] == true)
+>>>>>>> 17f88cfe036ce8e7dbb27e28f03d9820a7e49294
 		{
 			return -1;
 		}
@@ -207,7 +211,11 @@ int isCardUnique(int cardSuit, int cardNum)
 
 	if (cardSuit == 1)
 	{
+<<<<<<< HEAD
 		if (diamondCards[temp] == true)
+=======
+		if (diamondCards[cardNum] == true)
+>>>>>>> 17f88cfe036ce8e7dbb27e28f03d9820a7e49294
 		{
 			return -1;
 		}
@@ -219,7 +227,11 @@ int isCardUnique(int cardSuit, int cardNum)
 
 	if (cardSuit == 2)
 	{
+<<<<<<< HEAD
 		if (clubCards[temp] == true)
+=======
+		if (clubCards[cardNum] == true)
+>>>>>>> 17f88cfe036ce8e7dbb27e28f03d9820a7e49294
 		{
 			return -1;
 		}
@@ -231,7 +243,11 @@ int isCardUnique(int cardSuit, int cardNum)
 
 	if (cardSuit == 3)
 	{
+<<<<<<< HEAD
 		if (spadeCards[temp] == true)
+=======
+		if (spadeCards[cardNum] == true)
+>>>>>>> 17f88cfe036ce8e7dbb27e28f03d9820a7e49294
 		{
 			return -1;
 		}
