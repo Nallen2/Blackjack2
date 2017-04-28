@@ -233,8 +233,6 @@ int isCardUnique(int cardSuit, int cardNum)
 	{
 
 		if (spadeCards[temp] == true)
-
-		if (spadeCards[cardNum] == true)
 		{
 			return -1;
 		}
