@@ -25,7 +25,7 @@ void PlayGame()
 					cardBottom[14];
 	
 	loadCards(cardTop, cardBottom); // 1) Loads cards from file
-	srand(unsigned int time(NULL));
+	srand((unsigned int)time(NULL));
 	
 	cout << "The game begins!" << endl;
 	
@@ -43,6 +43,7 @@ void PlayGame()
 		cin >> userChoice;
 
 		MakeChoice(playerCardsSuit, playerCardsNum, numPlayerCards, userChoice, userExit);
+		MakeChoiceComputer(computerCardsSuit, computerCardsNum, numComputerCards, userChoice, userExit);
 	}
 	checkWin(computerCardsNum, playerCardsNum, numPlayerCards, numComputerCards);
 }

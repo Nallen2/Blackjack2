@@ -21,6 +21,29 @@ void rules(char choice);
 void howToPlay(char choice);
 void PlayGame();
 void checkWin(int computerCardsNum[], int playerCardsNum[], int numPlayerCards, int numComputerCards);
+void MakeChoiceComputer(int computerCardsSuit[], int computerCardsNum[], int& numComputerCards, int userChoice, char& userExit);
+
+void MakeChoiceComputer(int computerCardsSuit[], int computerCardsNum[], int& numComputerCards, int userChoice, char& userExit)
+{
+	int computerRandom = 0;
+	computerRandom = rand() % 2;
+
+	switch (computerRandom)
+	{
+	case 1:
+		DrawCards_Computer(computerCardsSuit, computerCardsNum, numComputerCards, 1);
+		break;
+
+	case 2:
+		break;
+
+	case 3:
+		userExit = DiscardHand();
+		break;
+	default:
+		cin >> computerRandom;
+	}
+}
 
 
 void checkWin(int computerCardsNum[], int playerCardsNum[], int numPlayerCards, int numComputerCards)
